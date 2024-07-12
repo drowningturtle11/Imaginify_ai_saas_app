@@ -6,10 +6,8 @@ import User from "../database/models/user.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
 
-
 // CREATE
 export async function createUser(user: CreateUserParams) {
-  console.log("database connectd")
   try {
     await connectToDatabase();
 
@@ -24,9 +22,7 @@ export async function createUser(user: CreateUserParams) {
 // READ
 export async function getUserById(userId: string) {
   try {
-    
     await connectToDatabase();
-    
 
     const user = await User.findOne({ clerkId: userId });
 
