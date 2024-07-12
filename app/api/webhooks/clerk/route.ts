@@ -65,8 +65,8 @@ export async function POST(req: Request) {
       clerkId: id,
       email: email_addresses[0].email_address,
       username: username!,
-      firstName: first_name ?? 'unknown',
-      lastName: last_name??'unknown',
+      firstName: first_name ??'unknown',
+      lastName: last_name ??'unknown',
       photo: image_url,
     };
 
@@ -89,8 +89,8 @@ export async function POST(req: Request) {
     const { id, image_url, first_name, last_name, username } = evt.data;
 
     const user = {
-      firstName: first_name ??'unknown',
-      lastName: last_name ??'unknown',
+      firstName: first_name??'unknown'  ,
+      lastName: last_name??'unknown' ,
       username: username!,
       photo: image_url,
     };
